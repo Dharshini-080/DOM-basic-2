@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two</title>
+    <style>
+        body{
+            margin: 30px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form>
+        1st Number:<input type="text" id="firstNumber"><br>
+        2nd Number:<input type="text" id="secondNumber"><br>
+        <input type="button" onclick="multiplyBy()" value="Multiply">
+        <input type="button" onclick="divideBy()" value="Divide">
+    </form>
+    <p>The Result is:<br>
+    <span id="result"></span>
+    </p>
+    <script>
+        function multiplyBy(){
+        const fv= Number(document.getElementById("firstNumber").value)
+        const lv= Number(document.getElementById("secondNumber").value)
+        const m=fv*lv
+        const result=document.getElementById("result")
+        result.innerHTML=m
+    }
+        function divideBy(){
+        const fv= Number(document.getElementById("firstNumber").value)
+        const lv= Number(document.getElementById("secondNumber").value)
+        const m=fv/lv
+        const result=document.getElementById("result")
+        result.innerHTML=m
+    }
+        
+     </script>
+</body>
+</html>
